@@ -1,0 +1,30 @@
+version: "V1" # 版本号
+imageDir: "/Users/magic/Downloads/IIIFImages" # 图片存储目录绝对路径
+cacheDir: "/Users/magic/Downloads/IIIFCaches" # 缓存目录绝对路径
+host: "localhost"
+port: 8080
+maxPixels: 100000000    # 最大像素数
+concurrency: 4          # 并发数
+enableHTTPS: false      # 是否启用HTTPS
+certFile: ""            # 证书文件路径
+keyFile: ""             # 私钥文件路径
+readMinIO: true        # 是否从MinIO读取图片
+minio:
+  endpoint: "192.168.1.11:19000"
+  accessKey: "yeqing"
+  secretKey: "9y9rysdxd"
+  bucket: "test"
+  useSSL: true
+cacheMaxSize: 10737418240          # 缓存最大大小，单位为字节
+cors:
+  allowOrigins: ["*"]              # 允许的源域名
+  allowMethods: ["GET", "OPTIONS"] # 允许的HTTP方法
+  allowHeaders: ["Accept", "Content-Type", 是否允许携带凭证"Content-Length", "Accept-Encoding"] # 允许的HTTP头部
+  allowCredentials: false          # 是否允许携带凭证
+  maxAge: 86400                    # 预检请求的有效期，单位为秒
+redis:
+  host: "192.168.1.11"
+  port: 6379
+  password: ""
+  db: 0
+  useTLS: false
