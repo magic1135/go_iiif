@@ -194,7 +194,7 @@ vips -l | grep -i format
 
 # 获取代码
 ```bash
-git clone https://gitlab.com/magic1135/go_iiif.git
+git clone https://gitlab.com/wang-jiamian/go_iiif.git
 cd go_iiif
 ```
 # 配置服务
